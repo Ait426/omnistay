@@ -8,6 +8,16 @@
   "currency": {
     "default": "KRW"
   },
+  "adapters": {
+    "yanolja": {
+      "base_url": "https://pms-mashup.yflux.biz/v1/properties/{property_id}/",
+      "property_id": "YOUR_PROPERTY_ID",
+      "access_token": "YOUR_ACCESS_TOKEN",
+      "endpoints": {
+        "reservations": "reservations"
+      }
+    }
+  },
   "excel": {
     "ledger_path": "C:/Users/OmniStay/Desktop/장부.xlsx",
     "sheet_name": "예약현황",

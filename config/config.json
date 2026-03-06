@@ -9,7 +9,20 @@
     "default": "KRW"
   },
   "excel": {
-    "ledger_path": "",
-    "sheets": {}
+    "ledger_path": "C:/Users/OmniStay/Desktop/장부.xlsx",
+    "sheet_name": "예약현황",
+    "start_cell": "B4",
+    "columns": {
+      "guest_name": "B",
+      "room_number": "C",
+      "room_type": "D",
+      "check_in_time": "E",
+      "check_out_time": "F",
+      "total_amount": "G",
+      "currency": "H",
+      "status": "I",
+      "source_pms": "J",
+      "external_reservation_id": "K"
+    }
   }
 }

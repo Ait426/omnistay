@@ -11,7 +11,7 @@ import enum
 from datetime import datetime, timezone
 from decimal import Decimal
 
-from sqlalchemy import DateTime, Enum, Integer, Numeric, String, Text
+from sqlalchemy import Boolean, DateTime, Enum, Integer, Numeric, String, Text
 from sqlalchemy.orm import Mapped, mapped_column
 
 from core.database import Base
@@ -64,6 +64,11 @@ class Reservation(Base):
     status: Mapped[ReservationStatus] = mapped_column(
         Enum(ReservationStatus, native_enum=False, length=20),
         nullable=False,
+    )
+
+    # 엑셀 기입 상태 추적 — 중복 기입 방지
+    is_exported_to_excel: Mapped[bool] = mapped_column(
+        Boolean, default=False, nullable=False
     )
 
     # 메타

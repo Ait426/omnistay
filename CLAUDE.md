@@ -74,16 +74,17 @@ All configurable values MUST be loaded from `/config/config.json` via `config_lo
 
 **Currency:** All monetary amounts (`total_amount`, etc.) MUST use Python's `Decimal` type. Every amount column MUST be paired with an ISO 4217 currency code column (e.g., `currency="KRW"`).
 
-**Reservation status:** Only these 4 enum values are allowed system-wide:
+**Reservation status:** Only these 5 enum values are allowed system-wide:
 
 | Enum Value          | Meaning         |
 | ------------------- | --------------- |
 | `EXPECTED_CHECKIN`  | Expected arrival |
 | `CHECKED_IN`        | Guest checked in |
+| `EXPECTED_CHECKOUT` | Expected departure |
 | `CHECKED_OUT`       | Guest checked out |
 | `CANCELED`          | Reservation canceled |
 
-External PMS status codes (e.g., Yanolja's `IH`, `SO`) MUST be mapped to one of these 4 values inside the adapter layer before reaching Core.
+External PMS status codes (e.g., Yanolja's `IH`, `SO`, `CO`) MUST be mapped to one of these 5 values inside the adapter layer before reaching Core.
 
 ### Rule 3: Fail-Fast & Explicit Logging
 

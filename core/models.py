@@ -18,10 +18,11 @@ from core.database import Base
 
 
 class ReservationStatus(enum.Enum):
-    """예약 상태 — 시스템 전체에서 이 4가지만 허용된다."""
+    """예약 상태 — 시스템 전체에서 이 5가지만 허용된다."""
 
     EXPECTED_CHECKIN = "EXPECTED_CHECKIN"
     CHECKED_IN = "CHECKED_IN"
+    EXPECTED_CHECKOUT = "EXPECTED_CHECKOUT"
     CHECKED_OUT = "CHECKED_OUT"
     CANCELED = "CANCELED"
 

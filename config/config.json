@@ -8,6 +8,9 @@
   "currency": {
     "default": "KRW"
   },
+  "scheduler": {
+    "interval_minutes": 10
+  },
   "adapters": {
     "yanolja": {
       "base_url": "https://pms-mashup.yflux.biz/v1/properties/{property_id}/",

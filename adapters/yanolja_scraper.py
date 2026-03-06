@@ -42,7 +42,7 @@ _STATUS_MAP: dict[str, str] = {
     "IH": "CHECKED_IN",
     "SO": "CHECKED_OUT",
     "CI": "EXPECTED_CHECKIN",
-    "CO": "EXPECTED_CHECKIN",
+    "CO": "EXPECTED_CHECKOUT",
 }
 
 # ── 야놀자 채널 코드 매핑 ─────────────────────────────────────────
@@ -241,6 +241,12 @@ async def _scrape_and_store() -> None:
         raise
     finally:
         session.close()
+
+
+async def scrape_and_store() -> None:
+    """외부(main.py 등)에서 호출 가능한 비동기 진입점."""
+    init_db()
+    await _scrape_and_store()
 
 
 def run() -> None:

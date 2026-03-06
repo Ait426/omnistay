@@ -1,0 +1,15 @@
+{
+  "database": {
+    "url": "sqlite:///data/omnistay.db"
+  },
+  "timezone": {
+    "local": "Asia/Seoul"
+  },
+  "currency": {
+    "default": "KRW"
+  },
+  "excel": {
+    "ledger_path": "",
+    "sheets": {}
+  }
+}
